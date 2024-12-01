@@ -24,14 +24,14 @@ export default function Hero() {
             
             <div className="flex items-center space-x-4">
               <Image 
-                src="/placeholder.svg?height=50&width=168"
+                src="/boton playstore.png"
                 alt="Obtener en Google Play"
                 width={168}
                 height={50}
                 className="cursor-pointer"
               />
               <Image 
-                src="/placeholder.svg?height=50&width=168"
+                src="/boton app store.png"
                 alt="Descargar en la App Store"
                 width={168}
                 height={50}

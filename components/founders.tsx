@@ -4,12 +4,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const founders = [
-  { name: "Ana García", role: "CEO", image: "/images/founders/ana.jpg" },
-  { name: "Carlos Rodríguez", role: "CTO", image: "/images/founders/carlos.jpg" },
-  { name: "María López", role: "COO", image: "/images/founders/maria.jpg" },
-  { name: "Juan Martínez", role: "CFO", image: "/images/founders/juan.jpg" },
-  { name: "Laura Sánchez", role: "CMO", image: "/images/founders/laura.jpg" },
-  { name: "Pedro Hernández", role: "CIO", image: "/images/founders/pedro.jpg" }
+  { name: "Mariano", role: "CEO", image: "/images/founders/ana.jpg" },
+  { name: "Alejito", role: "CTO", image: "/alejito.png" },
+  { name: "Nuki", role: "COO", image: "/nuki.jpg" },
+  { name: "Gino", role: "CFO", image: "/gino.jpg" },
+  { name: "Gerundia", role: "CMO", image: "/images/founders/laura.jpg" },
+  { name: "Claude", role: "CIO", image: "/images/founders/pedro.jpg" }
 ]
 
 export default function Founders() {

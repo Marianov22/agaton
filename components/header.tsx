@@ -14,20 +14,20 @@ export default function Header() {
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#" className="text-gray-600 hover:text-gray-900">
-              For Consumers
+              Para Pipones
             </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">
-              For Businesses
+              Para Negocios
             </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">
-              Career
+              Equipo
             </Link>
             
             <Button variant="outline" className="border-[#4CD964] text-[#4CD964] hover:bg-[#4CD964] hover:text-white">
-              UNIRSE COMO TIENDA
+              UNIRSE COMO NEGOCIO
             </Button>
             <Button className="bg-[#4CD964] text-white hover:bg-[#3cb751]">
-              OBTENER LA APP
+              Descarga la app!
             </Button>
           </nav>
         </div>
