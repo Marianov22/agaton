@@ -9,19 +9,20 @@ import { toast } from "@/components/ui/use-toast"
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setIsSubmitting(true)
-
-    // Simular envío de formulario
-    await new Promise(resolve => setTimeout(resolve, 2000))
-
-    setIsSubmitting(false)
-    toast({
-      title: "Formulario enviado",
-      description: "Gracias por contactarnos. Te responderemos pronto.",
-    })
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      // Agregar validación aquí
+      if (!email || !message) {
+        throw new Error('Por favor completa todos los campos');
+      }
+      // ... resto del código
+    } catch (error) {
+      // Manejar el error
+    }
   }
 
   return (
@@ -58,6 +59,8 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full"
                 placeholder="tu@email.com"
               />
@@ -70,6 +73,8 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full"
                 placeholder="Tu mensaje"
                 rows={4}
