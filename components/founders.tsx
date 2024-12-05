@@ -23,7 +23,7 @@ export default function Founders() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center text-[#1a2b49] mb-12"
         >
-          Nuestros Fundadores
+          Los Amigos
         </motion.h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {founders.map((founder, index) => (
