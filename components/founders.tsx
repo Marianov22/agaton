@@ -35,13 +35,14 @@ export default function Founders() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Image
-                src={founder.image}
-                alt={founder.name}
-                width={200}
-                height={200}
-                className="rounded-full mb-4"
-              />
+              <div className="w-[200px] h-[200px] relative mb-4">
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  fill
+                  className="rounded-full object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-[#1a2b49]">{founder.name}</h3>
               <p className="text-gray-600">{founder.role}</p>
             </motion.div>
