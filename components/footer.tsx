@@ -14,10 +14,10 @@ export default function Footer() {
             </p>
           </div>
           <nav className="flex space-x-4">
-            <Link href="/terminos-y-condiciones" className="text-sm text-gray-600 hover:text-gray-900">
+            <Link href="/terminos" className="hover:text-gray-400">
               Términos y Condiciones
             </Link>
-            <Link href="/privacidad" className="text-sm text-gray-600 hover:text-gray-900">
+            <Link href="/privacidad" className="hover:text-gray-400">
               Política de Privacidad
             </Link>
           </nav>
