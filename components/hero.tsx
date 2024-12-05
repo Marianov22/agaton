@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -22,21 +23,30 @@ export default function Hero() {
               Compra comida premium y deliciosa no vendida a precios imbatibles en Pipón, y ayuda a revertir el cambio climático, ¡una comida a la vez!
             </p>
             
-            <div className="flex items-center space-x-4">
-              <Image 
-                src="/boton playstore.png"
-                alt="Obtener en Google Play"
-                width={168}
-                height={50}
-                className="cursor-pointer"
-              />
-              <Image 
-                src="/boton app store.png"
-                alt="Descargar en la App Store"
-                width={168}
-                height={50}
-                className="cursor-pointer"
-              />
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Link 
+                href="#" 
+                className="w-[200px] h-[60px] relative"
+              >
+                <Image
+                  src="/app-store.png"
+                  alt="Descarga en App Store"
+                  fill
+                  className="object-contain"
+                />
+              </Link>
+              
+              <Link 
+                href="#" 
+                className="w-[200px] h-[60px] relative"
+              >
+                <Image
+                  src="/play-store.png"
+                  alt="Descarga en Play Store"
+                  fill
+                  className="object-contain"
+                />
+              </Link>
             </div>
             
             <div className="space-y-4">
@@ -47,11 +57,11 @@ export default function Hero() {
                   width={100}
                   height={100}
                 />
-                <span className="text-sm text-gray-600">APP DEL DÍA</span>
+                <span className="text-sm text-gray-600">APP DEL AÑO (ah re mentiroso)</span>
               </div>
               
               <div className="space-y-2">
-                <p className="text-sm text-gray-600">Disponible en Hong-Kong, Tailandia y Singapur</p>
+                <p className="text-sm text-gray-600">Disponible solo en Argentina (por ahora)</p>
                 <p className="text-sm text-gray-600">✅ +500,000 héroes de la comida en Pipón</p>
                 <p className="text-sm text-gray-600">⭐ 4.8 calificación en las tiendas de aplicaciones</p>
               </div>
