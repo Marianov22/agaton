@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 export default function Hero() {
   return (
@@ -22,6 +23,16 @@ export default function Hero() {
             <p className="text-lg text-gray-600">
               Compra comida premium y deliciosa no vendida a precios imbatibles en Pipón, y ayuda a revertir el cambio climático, ¡una comida a la vez!
             </p>
+            
+            <div className="flex gap-4">
+              <Button
+                onClick={() => {
+                  document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Unirse como negocio
+              </Button>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="#">
