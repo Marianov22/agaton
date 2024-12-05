@@ -24,26 +24,22 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Link 
-                href="#" 
-                className="w-[200px] h-[60px] relative"
-              >
+              <Link href="#" className="inline-block">
                 <Image
                   src="/app-store.png"
                   alt="Descarga en App Store"
-                  fill
+                  width={200}
+                  height={60}
                   className="object-contain"
                 />
               </Link>
               
-              <Link 
-                href="#" 
-                className="w-[200px] h-[60px] relative"
-              >
+              <Link href="#" className="inline-block">
                 <Image
                   src="/play-store.png"
                   alt="Descarga en Play Store"
-                  fill
+                  width={200}
+                  height={60}
                   className="object-contain"
                 />
               </Link>
