@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const founders = [
   { name: "Mariano", role: "CEO", image: "/images/founders/ana.jpg" },
   { name: "Alejito", role: "CTO", image: "/alejito.png" },
-  { name: "Nuki", role: "COO", image: "/nuki.jpg" },
+  { name: "Nuki", role: "COO", image: "/Nuki.jpg" },
   { name: "Gino", role: "CFO", image: "/gino.jpg" },
   { name: "Gerundia", role: "CMO", image: "/images/founders/laura.jpg" },
   { name: "Claude", role: "CIO", image: "/images/founders/pedro.jpg" }
