@@ -14,8 +14,8 @@ export default function Footer() {
             </p>
           </div>
           <nav className="flex space-x-4">
-            <Link href="/terminos" className="hover:text-gray-400">
-              Términos y Condiciones
+            <Link href="/terminos-y-condiciones" className="hover:text-gray-300">
+              Términos y condiciones
             </Link>
             <Link href="/privacidad" className="hover:text-gray-400">
               Política de Privacidad

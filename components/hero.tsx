@@ -57,12 +57,13 @@ export default function Hero() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Image 
-                  src="/placeholder.svg?height=100&width=100"
+                  src="/appoftheday.png"
                   alt="App del Día"
-                  width={100}
-                  height={100}
+                  width={250}
+                  height={250}
+                  className="object-contain"
                 />
-                <span className="text-sm text-gray-600">APP DEL AÑO (ah re mentiroso)</span>
+                <span className="text-sm text-gray-600">APP DEL DIA (ah re mentiroso)</span>
               </div>
               
               <div className="space-y-2">
@@ -77,13 +78,13 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative"
+            className="relative -ml-8"
           >
             <Image
-              src="/placeholder.svg?height=600&width=500"
-              alt="Persona con bolsa de Pipón"
-              width={500}
-              height={600}
+              src="/iPhone.jpg"
+              alt="iphone"
+              width={300}
+              height={400}
               className="object-cover rounded-lg"
             />
           </motion.div>
