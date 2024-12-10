@@ -25,13 +25,14 @@ export default function Hero() {
             </p>
             
             <div className="flex gap-4">
-              <Button
+              <button
                 onClick={() => {
                   document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
                 }}
+                className="bg-[#4CD964] hover:bg-[#4CD964]/80 text-white px-4 py-2 rounded-lg transition-colors duration-300"
               >
                 Unirse como negocio
-              </Button>
+              </button>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">

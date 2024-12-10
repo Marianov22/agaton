@@ -38,9 +38,9 @@ export default function Testimonials() {
                 <Image
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  width={80}
-                  height={80}
-                  className="rounded-full mr-4"
+                  width={120}
+                  height={120}
+                  className="rounded-full object-cover w-[100px] h-[100px]"
                 />
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>

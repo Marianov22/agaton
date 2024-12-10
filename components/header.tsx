@@ -19,7 +19,14 @@ export default function Header() {
             <Link href="#" className="text-gray-600 hover:text-gray-900">
               Para Negocios
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
+            <Link 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('founders')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-gray-900"
+            >
               Equipo
             </Link>
             
