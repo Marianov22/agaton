@@ -5,22 +5,22 @@ import Image from 'next/image'
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "María García",
+      name: "Mama de Mariano",
       role: "Usuario frecuente",
       content: "Pipón ha cambiado la forma en que como fuera. Ahorro dinero y ayudo al medio ambiente al mismo tiempo. ¡Es increíble!",
-      avatar: "/placeholder.svg?height=64&width=64"
+      avatar: "/gisel.png"
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Dueño de restaurante",
+      name: "Alejo",
+      role: "Alejito pero con bigotes",
       content: "Como propietario de un restaurante, Pipón nos ha ayudado a reducir el desperdicio de alimentos y a llegar a nuevos clientes. Una plataforma fantástica.",
-      avatar: "/placeholder.svg?height=64&width=64"
+      avatar: "/alejobigote.jpg"
     },
     {
       name: "Laura Martínez",
-      role: "Activista ambiental",
+      role: "Persona creada con IA, ah re",
       content: "Pipón está haciendo una diferencia real en la lucha contra el desperdicio de alimentos. Es una solución innovadora para un problema global.",
-      avatar: "/placeholder.svg?height=64&width=64"
+      avatar: "/fotoIA.jpg"
     }
   ]
 
@@ -28,7 +28,7 @@ export default function Testimonials() {
     <section className="py-20 bg-[#f8fdf8]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1a2b49] mb-12">
-          Lo que dicen nuestros usuarios
+          Lo que dicen nuestros usuarios 100% reales
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
@@ -38,8 +38,8 @@ export default function Testimonials() {
                 <Image
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  width={64}
-                  height={64}
+                  width={80}
+                  height={80}
                   className="rounded-full mr-4"
                 />
                 <div>

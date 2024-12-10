@@ -23,9 +23,15 @@ export default function Header() {
               Equipo
             </Link>
             
-            <Button variant="outline" className="border-[#4CD964] text-[#4CD964] hover:bg-[#4CD964] hover:text-white">
-              Registra tu Negocio
-            </Button>
+            <Button
+          variant="outline"
+             className="border-[#4CD964] text-[#4CD964] hover:bg-[#4CD964] hover:text-white"
+    onClick={() => {
+             document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
+    }}
+  >
+    Registra tu Negocio
+  </Button>
             <Button className="bg-[#4CD964] text-white hover:bg-[#3cb751]">
               Descarga la app!
             </Button>
