@@ -14,11 +14,11 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Featured />
         <Features />
         <Founders />
         <Testimonials />
         <CTA />
+        <Featured />
         <ContactForm />
       </main>
       <Footer />

@@ -24,7 +24,7 @@ export default function Header() {
             </Link>
             
             <Button variant="outline" className="border-[#4CD964] text-[#4CD964] hover:bg-[#4CD964] hover:text-white">
-              UNIRSE COMO NEGOCIO
+              Registra tu Negocio
             </Button>
             <Button className="bg-[#4CD964] text-white hover:bg-[#3cb751]">
               Descarga la app!

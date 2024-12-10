@@ -85,7 +85,7 @@ export default function Hero() {
               alt="iphone"
               width={300}
               height={400}
-              className="object-cover rounded-lg"
+              className="hidden md:block object-cover rounded-lg ml-auto mr-2"
             />
           </motion.div>
         </div>

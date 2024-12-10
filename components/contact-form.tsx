@@ -9,14 +9,20 @@ import { toast } from "@/components/ui/use-toast"
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    location: '',
+    business: '',
+    message: ''
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
     try {
-      // Agregar validación aquí
-      if (!email || !message) {
+      if (!formData.email || !formData.message) {
         throw new Error('Por favor completa todos los campos');
       }
       // ... resto del código
@@ -59,10 +65,57 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
                 className="w-full"
                 placeholder="tu@email.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                Teléfono Celular
+              </label>
+              <Input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                value={formData.phone}
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                className="w-full"
+                placeholder="Tu teléfono"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
+                Localidad
+              </label>
+              <Input
+                type="text"
+                id="location"
+                name="location"
+                required
+                value={formData.location}
+                onChange={(e) => setFormData({...formData, location: e.target.value})}
+                className="w-full"
+                placeholder="Tu localidad"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="business" className="block text-sm font-medium text-gray-700 mb-1">
+                Nombre del Negocio
+              </label>
+              <Input
+                type="text"
+                id="business"
+                name="business"
+                required
+                value={formData.business}
+                onChange={(e) => setFormData({...formData, business: e.target.value})}
+                className="w-full"
+                placeholder="Nombre de tu negocio"
               />
             </div>
             <div>
@@ -73,8 +126,8 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 required
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
                 className="w-full"
                 placeholder="Tu mensaje"
                 rows={4}
