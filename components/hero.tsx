@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Underline } from '@/components/Underline'
 
 export default function Hero() {
   return (
@@ -16,9 +17,14 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a2b49] leading-tight">
-              Salva el planeta haciendo lo que más amas. Comer con Pipón.
-            </h1>
+            <div className="relative">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a2b49] leading-tight">
+                Salva el planeta haciendo lo que más amas. Comer con Pipón.
+              </h1>
+              <div className="absolute -bottom-4 w-full">
+                <Underline />
+              </div>
+            </div>
             
             <p className="text-lg text-gray-600">
               Compra comida premium y deliciosa no vendida a precios imbatibles en Pipón, y ayuda a revertir el cambio climático, ¡una comida a la vez!
