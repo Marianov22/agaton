@@ -34,7 +34,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
-              <div className="flex items-center">
+              <div className="flex items-center space-x-4">
                 <Image
                   src={testimonial.avatar}
                   alt={testimonial.name}
@@ -42,8 +42,8 @@ export default function Testimonials() {
                   height={120}
                   className="rounded-full object-cover w-[100px] h-[100px]"
                 />
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+                <div className="ml-2">
+                  <p className="font-semibold text-[#1a2b49]">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </div>

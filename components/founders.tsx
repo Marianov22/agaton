@@ -3,16 +3,15 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const founders = [
-  { name: "Mariano", role: "CEO", image: "/mariano.jpg" },
-  { name: "Alejito", role: "CTO", image: "/alejito.png" },
-  { name: "Nuki", role: "COO", image: "/Nuki.jpg" },
-  { name: "Gino", role: "CFO", image: "/gino.jpg" },
-  { name: "Gerundia", role: "CMO", image: "/gerundia.jpg" },
-  { name: "Claude", role: "CIO", image: "/claude.jpg" }
-]
-
 export default function Founders() {
+  const founders = [
+    { name: "Mariano", role: "Executive & Tech", image: "/mariano.jpg" },
+    { name: "Alejito", role: "Tech Lead & Dev", image: "/alejito.png" },
+    { name: "Nuki", role: "Product & Ops", image: "/Nuki.jpg" },
+    { name: "Gino", role: "Finance & Strategy", image: "/gino.jpg" },
+    { name: "Gerundia", role: "Marketing & Sales", image: "/gerundia.jpg" },
+  ]
+
   return (
     <section id="founders" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -25,11 +24,11 @@ export default function Founders() {
         >
           Los Amigos
         </motion.h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {founders.map((founder, index) => (
             <motion.div 
               key={index} 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(20%-1rem)]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
