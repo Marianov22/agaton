@@ -23,6 +23,8 @@ export default function Footer() {
           </nav>
         </div>
       </div>
+      <div className="footer">
+</div>
     </footer>
   )
 }
