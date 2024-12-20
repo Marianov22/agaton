@@ -5,7 +5,6 @@ quien chot4 sos y porque estas mirando mi proyecto?
 
 // TO DO
 
-Agregar una seccion de video y ocultarla para el futuro
 Arreglar subrayado
 Cambiar Copy, color y agregar logo/mascota
 "Equipo" como una ruta aparte con su respectiva descripcion

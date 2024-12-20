@@ -17,13 +17,13 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-                Salvá el planeta haciendo lo que más amás.{" "}
-                <span className="underline-magical">
-                  Comer con Pipón
-                </span>
+            <div className="relative">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a2b49] leading-tight">
+                Salva el planeta haciendo lo que más amas. Comer con Pipón.
               </h1>
+              <div className="absolute -bottom-4 w-full">
+                <Underline />
+              </div>
             </div>
             
             <p className="text-lg text-gray-600">
