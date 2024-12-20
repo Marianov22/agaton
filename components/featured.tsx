@@ -4,11 +4,11 @@ export default function Featured() {
   const logos = [
     { name: "CFOstartup", width: 150, src: "/Logos/cfologo.png" },
     { name: "Legalventures", width: 100, src: "/Logos/legalventures.png" },
-    { name: "Dia", width: 120, src: "/Logos/Dia-logo.png" },
+    { name: "Dia", width: 120, src: "/Logos/Dia-Logo.png" },
     { name: "ABC", width: 80, src: "/Logos/pedidosya.png" },
     { name: "CFOstartup", width: 150, src: "/Logos/cfologo.png" },
     { name: "Legalventures", width: 100, src: "/Logos/legalventures.png" },
-    { name: "Dia", width: 120, src: "/Logos/Dia-logo.png" },
+    { name: "Dia", width: 120, src: "/Logos/Dia-Logo.png" },
     { name: "ABC", width: 80, src: "/Logos/pedidosya.png" },
   ]
 
