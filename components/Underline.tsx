@@ -8,7 +8,7 @@ export const Underline = () => {
     >
       <g>
         <g transform="matrix(1,0,0,0.375,0,0)" opacity="1">
-          <g opacity="1" transform="matrix(1,0,0,1,165,36.801998138427734)">
+          <g opacity="0" transform="matrix(1,0,0,1,165,36.801998138427734)">
             <path 
               strokeLinecap="round" 
               strokeLinejoin="miter" 
