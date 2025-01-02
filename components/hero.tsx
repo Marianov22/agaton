@@ -30,16 +30,7 @@ export default function Hero() {
               Compra comida premium y deliciosa no vendida a precios imbatibles en Pipón, y ayuda a revertir el cambio climático, ¡una comida a la vez!
             </p>
             
-            <div className="flex gap-4">
-              <button
-                onClick={() => {
-                  document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-[#4CD964] hover:bg-[#4CD964]/80 text-white px-4 py-2 rounded-lg transition-colors duration-300"
-              >
-                Unirse como negocio
-              </button>
-            </div>
+        
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="#">
