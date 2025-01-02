@@ -114,6 +114,7 @@ export default function ContactForm() {
                 type="text"
                 id="name"
                 name="name"
+                value={formData.name}
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu nombre"
@@ -128,6 +129,7 @@ export default function ContactForm() {
                 type="text"
                 id="phone"
                 name="phone"
+                value={formData.phone}
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu teléfono"
                 onChange={handleChange}
@@ -141,6 +143,7 @@ export default function ContactForm() {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu correo electrónico"
@@ -155,6 +158,7 @@ export default function ContactForm() {
                 type="text"
                 id="business"
                 name="business"
+                value={formData.business}
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu negocio"
                 onChange={handleChange}
@@ -167,6 +171,7 @@ export default function ContactForm() {
               <Textarea
                 id="message"
                 name="message"
+                value={formData.message}
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu mensaje"

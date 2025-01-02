@@ -13,8 +13,8 @@ export default function Featured() {
       <div className="container mx-auto px-4">
         <p className="text-center text-gray-500 mb-8">Partners</p>
         <div className="relative flex overflow-hidden">
-          <div className="flex animate-[marquee_8s_linear_infinite] md:animate-[marquee_15s_linear_infinite] space-x-8">
-            {[...logos, ...logos, ...logos].map((logo, index) => (
+          <div className="flex animate-[marquee_30s_linear_infinite] md:animate-[marquee_45s_linear_infinite] space-x-8">
+            {[...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
               <Image
                 key={index}
                 src={logo.src}
