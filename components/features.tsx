@@ -33,7 +33,7 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center text-[#1a2b49] mb-12"
         >
-          ¿Por qué elegir Pipón?
+          ¿Para que sirve Pipón?
         </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (

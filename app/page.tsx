@@ -8,6 +8,7 @@ import CTA from '@/components/cta'
 import ContactForm from '@/components/contact-form'
 import Footer from '@/components/footer'
 import VideoSection from '@/components/VideoSection'
+import FAQ from '@/components/faq'
 
 export default function Home() {
   return (
@@ -16,12 +17,13 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Features />
-        <Founders />
         <Testimonials />
         <CTA />
         <Featured />
         <ContactForm />
         <VideoSection />
+        <FAQ />
+        <Founders />
       </main>
       <Footer />
     </div>

@@ -14,10 +14,10 @@ export default function Header() {
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#" className="text-gray-600 hover:text-gray-900">
-              Para Pipones
+              Para que sirve Pipón?
             </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">
-              Para Negocios
+              Preguntas frecuentes  
             </Link>
             <Link 
               href="#"
