@@ -5,10 +5,9 @@ import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,22 +16,63 @@ export default function ContactForm() {
     business: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       if (!formData.email || !formData.message) {
-        throw new Error('Por favor completa todos los campos');
+        throw new Error('Por favor completa todos los campos requeridos');
       }
-      // ... resto del código
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el mensaje');
+      }
+
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        business: '',
+        message: ''
+      });
+
     } catch (error) {
-      // Manejar el error
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Hubo un error al enviar el mensaje",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-  }
+  };
 
-
-  
   return (
     <section id="contactForm" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -77,6 +117,7 @@ export default function ContactForm() {
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu nombre"
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -89,6 +130,7 @@ export default function ContactForm() {
                 name="phone"
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu teléfono"
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -102,6 +144,7 @@ export default function ContactForm() {
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu correo electrónico"
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -114,6 +157,7 @@ export default function ContactForm() {
                 name="business"
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu negocio"
+                onChange={handleChange}
               />
             </div>
             <div className="md:col-span-2">
@@ -126,6 +170,7 @@ export default function ContactForm() {
                 required
                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#4CD964]"
                 placeholder="Tu mensaje"
+                onChange={handleChange}
               />
             </div>
             <div className="md:col-span-2 text-center">
