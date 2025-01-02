@@ -13,11 +13,25 @@ export default function Header() {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
+            <Link 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-gray-900"
+            >
               Para que sirve Pipón?
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
-              Preguntas frecuentes  
+            <Link 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-gray-900"
+            >
+              Preguntas frecuentes
             </Link>
             <Link 
               href="#"
